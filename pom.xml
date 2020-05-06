@@ -8,11 +8,11 @@
 		<version>2.2.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>stackoverflow-question</artifactId>
+	<groupId>com.falvojr</groupId>
+	<artifactId>so-question-61560293</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>stackoverflow-question</name>
-	<description>Demo project for Spring Boot</description>
+	<name>so-question-61560293</name>
+	<description>StackOverflow Question 61560293</description>
 
 	<properties>
 		<java.version>1.8</java.version>

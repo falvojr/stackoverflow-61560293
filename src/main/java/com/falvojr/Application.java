@@ -1,4 +1,4 @@
-package com.example;
+package com.falvojr;
 
 import static com.mongodb.MongoClientSettings.getDefaultCodecRegistry;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
@@ -16,10 +16,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.example.domain.Log;
-import com.example.domain.LogRepository;
-import com.example.domain.MyClass1;
-import com.example.domain.MyClass2;
+import com.falvojr.domain.Log;
+import com.falvojr.domain.LogRepository;
+import com.falvojr.domain.MyClass1;
+import com.falvojr.domain.MyClass2;
 import com.mongodb.MongoClientOptions;
 
 @SpringBootApplication
@@ -57,6 +57,7 @@ public class Application implements CommandLineRunner {
 
         try {
             // Error occurs here, but in Spring Boot 1.X this conversion/cast works...
+            // Note: In Spring Boot 1, the "_class" field is present inside my "outbound" field.
             final MyClass1 test = logSaved.getOutbound().get(key, MyClass1.class);
             System.out.println(test);
         } catch (Exception e) {
